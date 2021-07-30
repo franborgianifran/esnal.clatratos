@@ -1,0 +1,119 @@
+:root{
+    --secondary-color: #008C9E;
+    --primary-color: #343838;
+    --complementario: #005F6B;
+    --soft-color: #F4EBC3;
+    --font: 'Montserrat', sans-serif;
+}
+html{
+    font-family: var(--font);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    height: 80px;
+    background-color: var(--primary-color);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header--moved{
+    box-shadow: 0px 0px 12px #fefefe;
+}
+.header--nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    font-family: var(--font);
+}
+.header--nav h1 b{
+    color: var(--complementario);
+}
+.header--nav h1{
+    font-size: 36px;
+    margin-left: 20px;
+    font-family: var(--font);
+    color: var(--soft-color);
+}
+.header--nav ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+.header--nav ul li{
+    margin: 10px;
+}
+header button img{
+    display: none;
+    cursor: pointer;
+}
+#about{
+    margin-top: 80px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    box-shadow: 1px 1px 12px #161616;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: space-evenly;  
+}
+#about h2{
+    font-weight: bold;
+    line-height: 98px;
+    color: var(--secondary-color);
+    font-size: 70px;
+}
+section p {
+    line-height: 64px;
+    text-align: justify;
+    color: var(--soft-color);
+    font-size: 40px;
+    max-width: 80%;
+}
+button{
+    background-color: transparent;
+}
+@media(max-width:900px){
+    .menu--button{
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    ul.header--menu{
+        display: block;
+        position: absolute;
+        top: -100vh;
+        transition: .7s all;
+        background-color: var(--complementario);
+        height: calc(100vh - 80px);
+        width: 100vw;
+        display: flex;
+        color: var(--soft-color);
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        font-size: 30px;
+    }
+    header nav .menu--active{
+        top: 80px;
+    }
+    #about h2{
+        font-size: 38px;
+        line-height: 60px;
+        text-align: center;
+    }
+    #about p {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 95%;
+    }
+}
