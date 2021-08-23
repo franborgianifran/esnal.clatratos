@@ -11,3 +11,12 @@ window.addEventListener('scroll', () => {
         header.classList.remove('header--moved');
     }
 });
+
+
+    // Loader
+
+
+const loaderElement = document.getElementById('loader');
+window.addEventListener('load', ()=>{
+    loaderElement.classList.toggle('loader2');
+})
